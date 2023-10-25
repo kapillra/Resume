@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from adminlte.io/themes/v3/pages/examples/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Aug 2023 10:46:27 GMT -->
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Log in</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'plugins/daterangepicker/daterangepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'plugins/select2/css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min2167.css' %}">
+
+    <style>
+        .data_list {
+            height: 300px !important;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+        .data_list h4 {
+            text-transform: capitalize;
+        }
+
+        /* profile image css */
+        .profile-user-img {
+            width: 150px;
+            max-height: 150px;
+            display: inline-block;
+        }
+        .file-upload {
+            display: none;
+        }
+        .profile-user-img {
+            max-width: 100%;
+            height: auto;
+        }
+        .p-image {
+            position: relative;
+            width: 150px;
+            height: 150px !important;
+            margin: auto;
+        }
+        .p-image:hover::before {
+            content: '';
+            position: absolute;
+            background-color: #0000004c;
+            height: 140px;
+            width: 140px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .p-image .upload-button {
+            position: absolute;
+            height: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        
+        .p-image:hover {
+            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+        }
+        .upload-button {
+            font-size: 1.2em;
+            display: none;
+        }
+
+        .p-image:hover .upload-button{
+            display: unset;
+        }
+
+        .upload-button:hover {
+            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+            color: #06d;
+        }
+    </style>
+    
+    <script nonce="4ae044af-4d07-4ec3-af56-5b415681a4a0">
+        (function (w, d) { !function (U, V, W, X) { U[W] = U[W] || {}; U[W].executed = []; U.zaraz = { deferred: [], listeners: [] }; U.zaraz.q = []; U.zaraz._f = function (Y) { return async function () { var Z = Array.prototype.slice.call(arguments); U.zaraz.q.push({ m: Y, a: Z }) } }; for (const $ of ["track", "set", "debug"]) U.zaraz[$] = U.zaraz._f($); U.zaraz.init = () => { var ba = V.getElementsByTagName(X)[0], bb = V.createElement(X), bc = V.getElementsByTagName("title")[0]; bc && (U[W].t = V.getElementsByTagName("title")[0].text); U[W].x = Math.random(); U[W].w = U.screen.width; U[W].h = U.screen.height; U[W].j = U.innerHeight; U[W].e = U.innerWidth; U[W].l = U.location.href; U[W].r = V.referrer; U[W].k = U.screen.colorDepth; U[W].n = V.characterSet; U[W].o = (new Date).getTimezoneOffset(); if (U.dataLayer) for (const bg of Object.entries(Object.entries(dataLayer).reduce(((bh, bi) => ({ ...bh[1], ...bi[1] })), {}))) zaraz.set(bg[0], bg[1], { scope: "page" }); U[W].q = []; for (; U.zaraz.q.length;) { const bj = U.zaraz.q.shift(); U[W].q.push(bj) } bb.defer = !0; for (const bk of [localStorage, sessionStorage]) Object.keys(bk || {}).filter((bm => bm.startsWith("_zaraz_"))).forEach((bl => { try { U[W]["z_" + bl.slice(7)] = JSON.parse(bk.getItem(bl)) } catch { U[W]["z_" + bl.slice(7)] = bk.getItem(bl) } })); bb.referrerPolicy = "origin"; bb.src = "../../../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(U[W]))); ba.parentNode.insertBefore(bb, ba) };["complete", "interactive"].includes(V.readyState) ? zaraz.init() : U.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);
+    </script>
+</head>
+
+<body class="hold-transition {{current_page_class}}">
+
+    {% block main_content %}
+    {% endblock %}
+
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+
+    
+
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'dist/js/adminlte.min2167.js' %}"></script>
+    {% if current_page == 'profile_page' %}
+    <script src="{% static 'plugins/select2/js/select2.full.min.js' %}"></script>
+    <script src="{% static 'plugins/daterangepicker/daterangepicker.js' %}"></script>
+    <script src="{% static 'plugins/moment/moment.min.js' %}"></script>
+    <script src="{% static 'plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+    
+    <!-- <script src="{% static 'dist/js/demo.js' %}"></script> -->
+    <script>
+        // $('body').removeClass('sidebar-mini').addClass('sidebar-collapse');
+        $(document).ready(function(){
+            $('#reservationdate').datetimepicker({
+                format: 'L'
+            });
+
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+        });
+
+        $('#skill_level').change(function() {
+            // alert($(this).val())
+        })
+        
+        // profile image
+        var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.profile-user-img').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+            }
+        }
+        
+
+            $(".file-upload").on('change', function(){
+                readURL(this);
+            });
+        
+            $(".upload-button").on('click', function() {
+            $(".file-upload").click();
+
+            // var submit_fun = function() {$('form.p-image').submit();}
+        });
+    </script>
+    {% endif %}
+</body>
+
+<!-- Mirrored from adminlte.io/themes/v3/pages/examples/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Aug 2023 10:46:27 GMT -->
+
+</html>

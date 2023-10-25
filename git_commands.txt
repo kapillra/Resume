@@ -1,0 +1,36 @@
+Git Commit Commands
+
+# Github account Configuration
+git config --global user.name <username>
+git config --global user.email <email>
+
+# Git Initialiation
+git init
+
+# Content related commands
+git add . –> Stage file changes. Running this command with an associated file name will stage the file changes to your staging directory.
+git status –> Display a list of files in your staging directory with accompanying file status.
+
+git commit -m – Add a Git commit message. Add your message in quotation marks following the command.
+
+git remote add origin <repository-url>
+
+git push origin master
+
+# Additional/Other commit cammands
+git commit –> Save changes to your Git repository. Running this command with an associated file name will save the file changes to your repo.
+git commit -a – Add all modified and deleted files in your working directory to the current commit.
+git commit --amend – Amend a Git commit. Edit a Git commit message by adding a message in quotation marks after the command.
+
+
+#####################################################
+# Git Clone Commands
+git clone <repository-url> – Clone a specified remote repository. See Git-SCM’s best practices for remote URL format.
+git clone <repository-url> <directory-name> – Clone a repository and name the local directory.
+git clone <repository-url> --origin <name> – Clone a repository and name the remote (<name>). If you do not wish to name the remote, Git will provide the default name origin.
+git clone <repository-url> --branch <branch-name> – Clone a repository and checkout the specific branch. 
+git clone <repository-url> --depth <depth> – Clone a repository with a specified number of commits (<depth>). 
+git clone <repository-url> --no-tags – Clone a repository without copying the repo’s tags.
+
+# Refereces
+https://www.gitkraken.com/learn/git/commands
